@@ -10,15 +10,15 @@ function linkCols() {
    */
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getActiveSheet();
-  /* range here is the cell values we are interested in for a particular col E */
-  var colE = sh.getRange('E190:E257');
+  /* range here is the cell values we are interested in for a particular col A */
+  var colE = sh.getRange('A1:A');
   var all = colE.getValues();
   /* range1 here is the cell values we are interested in linking with values 
-  from col E */
-  var colB = sh.getRange('B190:B257');
+  from col A */
+  var colB = sh.getRange('B1:B');
   var names = colB.getValues();
   /* range2 here is the specific values we are interested in that we will use to pick values from range1 */
-  var colJ = sh.getRange('J164:J199');
+  var colJ = sh.getRange('C1:C');
   var pickerArray = colJ.getValues();
   for (var i=0;i<names.length;i++){
   var email = all[i][0];
