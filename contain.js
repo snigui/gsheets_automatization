@@ -1,9 +1,9 @@
 function contains() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getActiveSheet();
+  // MAKE SURE YOUR COLUMN NAMES ARE RIGHT, EDIT AS NEEDED
   var data = sheet.getRange('A1:A').getValues().filter(String);
   var liveData = sheet.getRange('B1:B').getValues().filter(String);
-  //why just why is the getValue a 2D array that cant be flattened why
   //flattening it myself because someone had to do it smh
   data = (JSON.stringify(data)).replace(/\[*\]*"*/g,"")
   liveData = (JSON.stringify(liveData)).replace(/\[*\]*"*/g,"")
